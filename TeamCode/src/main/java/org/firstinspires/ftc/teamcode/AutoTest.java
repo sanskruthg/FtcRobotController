@@ -1,19 +1,20 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
+
 @Autonomous
-public class AutoTest extends LinearOpMode{
+public class AutoTest extends OpMode {
     private DcMotor frontLeftMotor = null;
     private DcMotor backLeftMotor = null;
     private DcMotor frontRightMotor = null;
     private DcMotor backRightMotor = null;
     
     @Override
-    public void runOpMode(){
+    public void init(){
         
         frontLeftMotor = hardwareMap.get(DcMotor.class, "frontLeftMotor");
         backLeftMotor = hardwareMap.get(DcMotor.class, "backLeftMotor");
@@ -27,6 +28,8 @@ public class AutoTest extends LinearOpMode{
 
         telemetry.addData("Status", "Initialized");
         telemetry.update();
+
+        /*
         waitForStart();
         while (opModeIsActive()) {
             frontLeftMotor.setPower(0.5);
@@ -41,5 +44,17 @@ public class AutoTest extends LinearOpMode{
             backLeftMotor.setPower(0);
             backRightMotor.setPower(0);
         }
+
+         */
+    }
+
+    @Override
+    public void start(){
+
+    }
+
+    @Override
+    public void loop(){
+
     }
 }
